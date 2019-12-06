@@ -37,36 +37,15 @@ public class RSAClass {
             this.e = randomNumber();
         }
         System.out.println("e kiszámolva");
-        //d kiszámolása
+        
+        //d kiszámolása ???
         EEA eea = EEA.algorithm(this.e, this.phiN);
         this.d = eea.getYq();
                     
-        //this.d = this.d.clearBit(0);
-//        BigInteger[] dxy = EEA.extEuclid(this.e, this.phiN);
-//        System.out.println("Tömb: "+dxy[1]);
-//        if(dxy[1].compareTo(BigInteger.ONE)<0) {
-//        	d = dxy[1].add(this.phiN);
-//                System.out.println("Tömb: "+d);
-//        }else if(dxy[1].compareTo(this.phiN)>0){
-//                
-//        	d = dxy[1].subtract(this.phiN);
-//                System.out.println("Tömb: "+d);
-//        }else {
-//            
-//        	d = dxy[1];
-//                System.out.println("Tömb: "+d);
-//        }
-        
+  
         
         System.out.println("d kiszámolva");
-//        BigInteger eeaX = eeaResult.getYp(); 
-//
-//        if(eeaX.compareTo(BigInteger.ONE) == -1) //ha eeaX negatív
-//            this.d = eeaX.add(this.phiN);
-//        else if(eeaX.compareTo(this.phiN) == 1) //ha eeaX 
-//            this.d = eeaX.subtract(this.phiN);
-//        else
-//            this.d = eeaX;
+
     }
     
     public BigInteger randomPrime(){ 
